@@ -15,6 +15,8 @@
 		AB45976D25E04C530038D640 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB45976B25E04C530038D640 /* LaunchScreen.storyboard */; };
 		AB45977825E04C540038D640 /* TodoListA2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB45977725E04C540038D640 /* TodoListA2Tests.swift */; };
 		AB45978325E04C540038D640 /* TodoListA2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB45978225E04C540038D640 /* TodoListA2UITests.swift */; };
+		AB45979725E056D70038D640 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB45979625E056D70038D640 /* Task.swift */; };
+		AB45979C25E058500038D640 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB45979B25E058500038D640 /* App.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		AB45977E25E04C540038D640 /* TodoListA2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoListA2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB45978225E04C540038D640 /* TodoListA2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListA2UITests.swift; sourceTree = "<group>"; };
 		AB45978425E04C540038D640 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB45979625E056D70038D640 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		AB45979B25E058500038D640 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				AB45976925E04C530038D640 /* Assets.xcassets */,
 				AB45976B25E04C530038D640 /* LaunchScreen.storyboard */,
 				AB45976E25E04C530038D640 /* Info.plist */,
+				AB45979625E056D70038D640 /* Task.swift */,
+				AB45979B25E058500038D640 /* App.swift */,
 			);
 			path = TodoListA2;
 			sourceTree = "<group>";
@@ -258,8 +264,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB45979725E056D70038D640 /* Task.swift in Sources */,
 				AB45976525E04C4F0038D640 /* ViewController.swift in Sources */,
 				AB45976125E04C4F0038D640 /* AppDelegate.swift in Sources */,
+				AB45979C25E058500038D640 /* App.swift in Sources */,
 				AB45976325E04C4F0038D640 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,7 +445,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N26H5M4G5V;
+				DEVELOPMENT_TEAM = RG9DD7MR44;
 				INFOPLIST_FILE = TodoListA2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -456,7 +464,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N26H5M4G5V;
+				DEVELOPMENT_TEAM = RG9DD7MR44;
 				INFOPLIST_FILE = TodoListA2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

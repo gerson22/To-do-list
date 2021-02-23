@@ -15,5 +15,8 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func willAdd(_ sender: Any) {
+        self.performSegue(withIdentifier: "sgTaskForm", sender: nil)
+    }
 }
 

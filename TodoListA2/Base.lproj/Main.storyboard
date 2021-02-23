@@ -1,24 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mmo-QX-LlO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tareas por hacer-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TodoListA2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g5C-eU-C2s">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BGb-37-z1R">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="BGb-37-z1R" firstAttribute="top" secondItem="epD-0q-hFW" secondAttribute="top" id="AlM-pd-SdD"/>
+                                    <constraint firstItem="BGb-37-z1R" firstAttribute="height" secondItem="GqU-94-uuo" secondAttribute="height" id="LSX-9M-MAw"/>
+                                    <constraint firstItem="BGb-37-z1R" firstAttribute="width" secondItem="GqU-94-uuo" secondAttribute="width" id="Sgf-Sk-8ol"/>
+                                    <constraint firstItem="BGb-37-z1R" firstAttribute="leading" secondItem="epD-0q-hFW" secondAttribute="leading" id="WD0-iM-Lgv"/>
+                                    <constraint firstItem="BGb-37-z1R" firstAttribute="bottom" secondItem="epD-0q-hFW" secondAttribute="bottom" id="gTE-Dc-FgH"/>
+                                    <constraint firstItem="BGb-37-z1R" firstAttribute="trailing" secondItem="epD-0q-hFW" secondAttribute="trailing" id="gl5-R1-xdw"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="epD-0q-hFW"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="GqU-94-uuo"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="g5C-eU-C2s" secondAttribute="bottom" id="2O9-cN-zL1"/>
+                            <constraint firstItem="g5C-eU-C2s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="C1D-QN-h2g"/>
+                            <constraint firstItem="g5C-eU-C2s" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="CFT-WR-ZlB"/>
+                            <constraint firstItem="g5C-eU-C2s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jQA-bK-1Jp"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Tareas por hacer" id="Of7-2c-dTv">
+                        <barButtonItem key="rightBarButtonItem" title="Add" image="plus" catalog="system" id="G1m-mI-anS">
+                            <connections>
+                                <action selector="willAdd:" destination="BYZ-38-t0r" id="cYw-jc-zge"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="skA-ba-I1j" kind="show" identifier="sgTaskForm" id="1tu-DE-ZUT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="56.919642857142854"/>
+        </scene>
+        <!--Agregar Tarea-->
+        <scene sceneID="Kum-I1-uxA">
+            <objects>
+                <viewController id="skA-ba-I1j" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UYt-84-Zgi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingresa el nombre de tu tarea..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C7d-0q-TnV">
+                                <rect key="frame" x="41.5" y="431" width="331" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gnz-ym-Znt">
+                                <rect key="frame" x="41.5" y="505" width="331" height="30"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <state key="normal" title="Agregar Tarea">
+                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dAw-1C-gSC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Gnz-ym-Znt" firstAttribute="top" secondItem="C7d-0q-TnV" secondAttribute="bottom" constant="40" id="CfT-V3-kOV"/>
+                            <constraint firstItem="C7d-0q-TnV" firstAttribute="width" secondItem="UYt-84-Zgi" secondAttribute="width" multiplier="0.8" id="Js5-Ak-7zg"/>
+                            <constraint firstItem="C7d-0q-TnV" firstAttribute="centerX" secondItem="UYt-84-Zgi" secondAttribute="centerX" id="QJ6-ME-6QV"/>
+                            <constraint firstItem="Gnz-ym-Znt" firstAttribute="centerX" secondItem="UYt-84-Zgi" secondAttribute="centerX" id="m2U-c0-zC4"/>
+                            <constraint firstItem="C7d-0q-TnV" firstAttribute="centerY" secondItem="UYt-84-Zgi" secondAttribute="centerY" id="qtn-BU-fs0"/>
+                            <constraint firstItem="Gnz-ym-Znt" firstAttribute="width" secondItem="C7d-0q-TnV" secondAttribute="width" id="wyF-wT-PgJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Agregar Tarea" id="d2i-os-kf6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KTv-kf-Low" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1910.144927536232" y="58.928571428571423"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rHW-m0-5Mw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mmo-QX-LlO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7iB-nG-CX6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mWc-fU-HbN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cb5-lX-kqs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="56.919642857142854"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
