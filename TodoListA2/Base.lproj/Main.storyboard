@@ -53,6 +53,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="scListTasks" destination="g5C-eU-C2s" id="OeH-SJ-kAL"/>
+                        <outlet property="svListTasks" destination="BGb-37-z1R" id="9G3-0Q-M7M"/>
                         <segue destination="skA-ba-I1j" kind="show" identifier="sgTaskForm" id="1tu-DE-ZUT"/>
                     </connections>
                 </viewController>
@@ -63,7 +65,7 @@
         <!--Agregar Tarea-->
         <scene sceneID="Kum-I1-uxA">
             <objects>
-                <viewController id="skA-ba-I1j" sceneMemberID="viewController">
+                <viewController id="skA-ba-I1j" customClass="TaskViewController" customModule="TodoListA2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UYt-84-Zgi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,6 +81,9 @@
                                 <state key="normal" title="Agregar Tarea">
                                     <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="save:" destination="skA-ba-I1j" eventType="touchUpInside" id="KJ2-Zp-QvP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dAw-1C-gSC"/>
@@ -93,6 +98,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Agregar Tarea" id="d2i-os-kf6"/>
+                    <connections>
+                        <outlet property="tfNameTask" destination="C7d-0q-TnV" id="K4k-mi-wk1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KTv-kf-Low" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

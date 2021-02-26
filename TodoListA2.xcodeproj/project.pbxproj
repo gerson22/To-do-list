@@ -17,6 +17,10 @@
 		AB45978325E04C540038D640 /* TodoListA2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB45978225E04C540038D640 /* TodoListA2UITests.swift */; };
 		AB45979725E056D70038D640 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB45979625E056D70038D640 /* Task.swift */; };
 		AB45979C25E058500038D640 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB45979B25E058500038D640 /* App.swift */; };
+		ABC7CA3225E9886100EE574D /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC7CA3125E9886100EE574D /* TaskViewController.swift */; };
+		ABC7CA4425E988B800EE574D /* UIItemTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC7CA4325E988B800EE574D /* UIItemTask.swift */; };
+		ABC7CA4925E9890B00EE574D /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC7CA4825E9890B00EE574D /* CheckBox.swift */; };
+		ABC7CA5225E98B6800EE574D /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC7CA5125E98B6800EE574D /* TaskDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		AB45978425E04C540038D640 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB45979625E056D70038D640 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		AB45979B25E058500038D640 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		ABC7CA3125E9886100EE574D /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		ABC7CA4325E988B800EE574D /* UIItemTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIItemTask.swift; sourceTree = "<group>"; };
+		ABC7CA4825E9890B00EE574D /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		ABC7CA5125E98B6800EE574D /* TaskDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,13 +113,14 @@
 			children = (
 				AB45976025E04C4F0038D640 /* AppDelegate.swift */,
 				AB45976225E04C4F0038D640 /* SceneDelegate.swift */,
-				AB45976425E04C4F0038D640 /* ViewController.swift */,
+				ABC7CA3025E9878500EE574D /* Objects */,
+				ABC7CA3925E9886F00EE574D /* Controllers */,
+				ABC7CA4D25E9892100EE574D /* UIComponents */,
 				AB45976625E04C4F0038D640 /* Main.storyboard */,
 				AB45976925E04C530038D640 /* Assets.xcassets */,
 				AB45976B25E04C530038D640 /* LaunchScreen.storyboard */,
 				AB45976E25E04C530038D640 /* Info.plist */,
-				AB45979625E056D70038D640 /* Task.swift */,
-				AB45979B25E058500038D640 /* App.swift */,
+				ABC7CA5125E98B6800EE574D /* TaskDelegate.swift */,
 			);
 			path = TodoListA2;
 			sourceTree = "<group>";
@@ -132,6 +141,33 @@
 				AB45978425E04C540038D640 /* Info.plist */,
 			);
 			path = TodoListA2UITests;
+			sourceTree = "<group>";
+		};
+		ABC7CA3025E9878500EE574D /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				AB45979625E056D70038D640 /* Task.swift */,
+				AB45979B25E058500038D640 /* App.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		ABC7CA3925E9886F00EE574D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AB45976425E04C4F0038D640 /* ViewController.swift */,
+				ABC7CA3125E9886100EE574D /* TaskViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ABC7CA4D25E9892100EE574D /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				ABC7CA4325E988B800EE574D /* UIItemTask.swift */,
+				ABC7CA4825E9890B00EE574D /* CheckBox.swift */,
+			);
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,11 +300,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABC7CA4925E9890B00EE574D /* CheckBox.swift in Sources */,
 				AB45979725E056D70038D640 /* Task.swift in Sources */,
+				ABC7CA4425E988B800EE574D /* UIItemTask.swift in Sources */,
 				AB45976525E04C4F0038D640 /* ViewController.swift in Sources */,
+				ABC7CA5225E98B6800EE574D /* TaskDelegate.swift in Sources */,
 				AB45976125E04C4F0038D640 /* AppDelegate.swift in Sources */,
 				AB45979C25E058500038D640 /* App.swift in Sources */,
 				AB45976325E04C4F0038D640 /* SceneDelegate.swift in Sources */,
+				ABC7CA3225E9886100EE574D /* TaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

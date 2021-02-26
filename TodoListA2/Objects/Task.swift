@@ -8,10 +8,12 @@
 import UIKit
 
 class Task: Codable {
+    var id:Int!
     var name:String!
     public private(set) var done:Bool = false
     
     init(_ name:String) {
+        self.id = Task.all().count+1
         self.name = name
     }
     
@@ -46,11 +48,15 @@ class Task: Codable {
         return [Task]()
     }
     
-    func wasDone(index:Int){
-        App.shared.tasks = Task.all()
-        self.done = true
-        App.shared.tasks[index] = self
-        
+    func wasDone(){
+        var newTasks = [Task]()
+        Task.all().forEach { (task) in
+            if task.id == self.id {
+                task.done = true
+            }
+            newTasks.append(task)
+        }
+        App.shared.tasks = newTasks
         self.store()
     }
 }
